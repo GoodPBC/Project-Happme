@@ -1,0 +1,23 @@
+
+body{background-color: #69f0ae;}
+
+h1{color: #009688;
+}
+h5{color: #009688;}
+
+.nav-wrapper{
+	background-color: #b9f6ca;
+text-align: center;
+padding-top: 5px;
+font-family:  Georgia, Lucida Console;
+font-style: italic;
+font-size: xx-large;
+padding: 15px;
+}
+
+p{text-align: center;
+color: #009688;}
+
+.card-action{text-align: center;}
+
+.container{margin-top: 150px;}
