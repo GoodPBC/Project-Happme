@@ -1,0 +1,25 @@
+body{background-color: #69f0ae;
+	/*background-color: #fff59d;*/
+}
+
+
+#radio{text-align: center;
+font-family: Muli;}
+
+#heading{text-align: center;
+background-color: #b9f6ca;
+border-style: solid;
+	border-color: #b9f6ca;
+	border-width: 10px;
+	font-family: Righteous, Muli;
+	font-style: oblique;
+	padding: 15px;
+
+}
+
+#slide{text-align: center;
+font-family: Muli;
+
+
+}
+

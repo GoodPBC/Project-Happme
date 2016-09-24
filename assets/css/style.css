@@ -1,12 +1,30 @@
 
 
-body{background-color: #69f0ae;}
+#top{
+	border-style: solid;
+	border-color: #26c6da;
+	border-width: 10px;
 
-h1{color: #009688;
 }
-h5{color: #009688;}
 
-.nav-wrapper{
+h1{color: #1a237e;
+	text-align: center;
+	font-family: Righteous, Arial;
+	font-style: oblique;
+}
+h4{color: #1a237e;
+text-align: center;
+font-family: Muli, Arial;
+font-style: oblique;}
+
+#topPic{width: 15px;
+height: 15px;}
+
+.container{padding: 10px;
+	background-color: #26c6da;
+}
+
+/*.nav-wrapper{
 	background-color: #b9f6ca;
 text-align: center;
 padding-top: 5px;
@@ -14,12 +32,16 @@ font-family:  Georgia, Lucida Console;
 font-style: italic;
 font-size: xx-large;
 padding: 15px;
-}
+}*/
 
 p{text-align: center;
 color: #009688;}
 
 .card-action{text-align: center;}
 
-.container{margin-top: 150px;}
+#picture{margin-top: 20px;
+margin-bottom: 15px;
+background-color: #26c6da;}
+
+
 

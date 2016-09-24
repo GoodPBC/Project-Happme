@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
+    =<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+<!-- //materialize -->
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <!--   google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Righteous" rel="stylesheet">
+  <!--   google icons -->
   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Link to css design page -->
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- backstretch -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+     
+
+    </head>
 <body>
-	
-<nav>
-<div>
-    <div class="nav-wrapper">
-      <div class="col-md-8">
-       	<h1>HappMe</h1>
-       	<h5>Time to get happy!</h5>
-      </div>
-    </div>
-    </div>
-  </nav>
+<script>
+$( document ).ready(function() {
+ console.log('test');
+  $.backstretch("http://previews.123rf.com/images/orson/orson1202/orson120200003/12324901-azzurro-Vector-bokeh-sfondo-fatto-da-luci-bianche-Archivio-Fotografico.jpg");
+});
+</script>
+<br>
+<br>
+<div class="container cyan lighten-4" id="top">
+ <!--  <img id="topPic" src=""> -->
+  <h1>HappMe</h1>
+  <h4>The happiness app.</h4>
+  <h4>Time to get happy!</h4>
+</div>
  <br>
- <div class="container">
+
+ <div class="container" id="picture">
 <div class="col-md-6">
-    <!-- <h2 class="header">     </h2> -->
     <div class="card horizontal">
       <div class="card-image">
         <img src="http://25.media.tumblr.com/tumblr_m3qgmyWuuC1r4lphgo1_500.jpg">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <p>Click the link below. Fill out the questions to determine your current emotional state.</p>
-          <p>Afterwards we will give you what you need to be happy.</p>
+          <p>Click the link below to take a quiz that analyzes your current emotional state.</p>
+          <br>
+          <br>
+          <p>HappMe will then determine what you need to become happy (or happier)!</p>
         </div>
         <div class="card-action">
-          <a href="#">Click this link to find your happiness</a>
+          <a href="quiz.html">Click here</a>
         </div>
       </div>
     </div>
@@ -40,7 +55,7 @@
   </div>  
 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 </body>
 
 </html>
