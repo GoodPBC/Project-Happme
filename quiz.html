@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Quiz Page</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<!-- materialize -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -11,60 +12,64 @@
   	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   	<!-- css link -->
   	<link rel="stylesheet" type="text/css" href="assets/css/quiz.css">
+  	<!--backstretch -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
 </head>
 <body>
 
-<div class="container white" id="heading">
+<script>
+$( document ).ready(function() {
+ console.log('test');
+  $.backstretch("https://il6.picdn.net/shutterstock/videos/7080982/thumb/1.jpg");
+  $("#heading").backstretch("http://gaudiyadarshan.com/gaudiyadarshan.com/wp-content/uploads/2011/05/NirmalBhakti-Gradient-Background-light-blue-to-white.jpg");
+});
+</script>
+
+<div class="container" id="heading">
 	<h2>Quiz time!</h2>
 	<h5>Click the button to begin the quiz.</h5>
 	<a class="waves-effect waves-light btn">Begin</a>
 </div>
-<div class="container white" id="radio">
-<form action="#">
+
+<div class="container white" id="quiz">
+<form action="#" id="qBox">
+	<p>Were you excited to get out of bed this morning?</p>
     <p>
-    <p><center>Question 2</center></p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">Yes</label>
       <input name="group1" type="radio" id="test2" />
-      <label for="test2">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
+      <label for="test2">No</label>
     </p>
-     <p>
-    <p><center>Question 2</center></p>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Answer</label>
+    <p>Have you laughed yet today?</p>
+    <p>
+      <input name="group2" type="radio" id="test3" />
+      <label for="test3">Yes</label>
+      <input name="group2" type="radio" id="test4" />
+      <label for="test4">No</label>
     </p>
-   
-  </form>
-  </div>
-<div class="container white" id="slide">
-  <div class="switch">
-  <p>Question</p>
-    <label>
-      Yes
-      <input type="checkbox">
-      <span class="lever"></span>
-      No
-    </label>
-  </div>
-  <div class="switch">
-  <p>Question</p>
-    <label>
-      Happy
-      <input type="checkbox">
-      <span class="lever"></span>
-      Sad
-    </label>
-  </div>
+    <p>Are you easily irritated today?</p>
+    <p>
+      <input name="group3" type="radio" id="test5" />
+      <label for="test5">Yes</label>
+      <input name="group3" type="radio" id="test6" />
+      <label for="test6">No</label>
+    </p>
+    <p>Did you sleep well last night?</p>
+    <p>
+      <input name="group4" type="radio" id="test7" />
+      <label for="test7">Yes</label>
+      <input name="group4" type="radio" id="test8" />
+      <label for="test8">No</label>
+    </p>
+    <p>Are you feeling optimistic about the future?</p>
+    <p>
+      <input name="group5" type="radio" id="test9" />
+      <label for="test9">Yes</label>
+      <input name="group5" type="radio" id="test10" />
+      <label for="test10">No</label>
+    </p>
+
+  
   </div>
 <br>
 <br>
@@ -73,6 +78,6 @@
 
 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 </body>
 </html>
