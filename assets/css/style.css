@@ -1,38 +1,72 @@
 
-
-#top{
+/*=========================== index.html css ==================================*/
+#top {
 	border-style: solid;
 	border-color: #26c6da;
 	border-width: 10px;
 	opacity: .7;
-
 }
 
-h1{color: #1a237e;
+h1 {
+	color: #1a237e;
 	text-align: center;
 	font-family: Righteous, Arial;
 	font-style: oblique;
-	
 }
-h4{color: #1a237e;
-text-align: center;
-font-family: Muli, Arial;
-font-style: oblique;}
 
+h4 {
+	color: #1a237e;
+	text-align: center;
+	font-family: Muli, Arial;
+	font-style: oblique;}
+}
 
-.container{padding: 10px;
+.container	{
+	padding: 10px;
 	background-color: #26c6da;
 }
 
 
-p{text-align: center;
-color: #009688;}
+p  {
+	text-align: center;
+	color: #009688;
+}
 
-.card-action{text-align: center;}
+.card-action	{
+	text-align: center;
+}
 
-#picture{margin-top: 20px;
-margin-bottom: 15px;
-background-color: #26c6da;}
+#picture {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	background-color: #26c6da;
+}
 
+/*=====================  quiz.html css  ===============================*/
+#radio	{
+	text-align: center;
+	font-family: Muli;
+}
 
+#heading	{
+	text-align: center;
+	color: #1a237e:;
+	border-style: solid;
+	border-color: white;
+	border-width: 10px;
+	font-family: Righteous, Muli;
+	font-style: oblique;
+	padding: 15px;
+	color: #1a237e;
+	opacity: .7;
+}
 
+#quiz	{
+	text-align: center;
+	font-family: Muli;
+	color: #1a237e;
+}
+
+#qBox	{
+	text-align: center;
+}
