@@ -12,8 +12,8 @@
 //=======================================================================site background===================================================================
 //=========================================================================================================================================================
 $( document ).ready(function() {
-  $.backstretch("https://il6.picdn.net/shutterstock/videos/7080982/thumb/1.jpg");
-  $("#top").backstretch("http://gaudiyadarshan.com/gaudiyadarshan.com/wp-content/uploads/2011/05/NirmalBhakti-Gradient-Background-light-blue-to-white.jpg");
+  $.backstretch("assets/images/site-bg.jpg");
+  $("#top").backstretch("assets/images/header-bg.jpg");
 });
 
 //=================================================================================================================================
