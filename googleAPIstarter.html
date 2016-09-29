@@ -10,10 +10,31 @@
 <body>
 	<!-- load the google API -->
 	<script>
-		function onLoadFunction() {
-			//make gapi.client calls from here
-		}
-		gapi.load("client", onLoadFunction);
+		//apends results from request from makeRequest()
+		function appendResults(text) {
+        var results = document.getElementById('results');
+        results.appendChild(document.createElement('P'));
+        results.appendChild(document.createTextNode(text));
+      }
+      //executes API request. Calls get & passes appropriate params for method
+      function makeRequest() {
+        var request = gapi.client.urlshortener.url.get({
+          'shortUrl': 'http://goo.gl/fbsS'
+        });
+        //appendResults is call back request. response is text object
+        request.then(function(response) { 
+          appendResults(response.result.longUrl);
+        }, function(reason) {
+          console.log('Error: ' + reason.result.error.message);
+        });
+      }
+
+      function init() {
+        gapi.client.setApiKey('AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s'); // sets API_key
+        gapi.client.load('urlshortener', 'v1').then(makeRequest);  //loads v1 of google URL shortener API & registers makerequest handler
+      }
+      //loads client library 7 registers handler that fires upon lib load 
+      gapi.load('client', init);
 	</script>
 	
 </body>
