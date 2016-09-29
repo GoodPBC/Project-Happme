@@ -70,3 +70,10 @@ p  {
 #qBox	{
 	text-align: center;
 }
+
+
+/*===============================  paralllax ====================================*/
+
+.parallax-container {
+      height: 800px;
+    }

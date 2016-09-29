@@ -14,7 +14,11 @@
 $( document ).ready(function() {
   $.backstretch("assets/images/background.jpg");
   $("#top").backstretch("assets/images/header-bg.jpg");
+   $('.parallax').parallax();
 });
+
+
+
 
 //=================================================================================================================================
 //=======================================Artist Info Musicovery API================================================================
