@@ -45,6 +45,7 @@ p  {
 }
 
 /*=====================  quiz.html css  ===============================*/
+
 #qBox{
 	text-align: center;
 	font-family: Muli;
@@ -86,3 +87,8 @@ label{color: #1a237e;}
 
 
 
+/*===============================  paralllax ====================================*/
+
+.parallax-container {
+      height: 800px;
+    }

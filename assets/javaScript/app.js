@@ -1,4 +1,5 @@
 
+
 $( document ).ready(function() {
 
 $("#begin").click(function() {
@@ -24,6 +25,9 @@ $("#begin").click(function() {
 
   $.backstretch("assets/images/background.jpg");
   $("#top").backstretch("assets/images/header-bg.jpg");
+   $('.parallax').parallax();
+
+
 
 //=================================================================================================================================
 //=======================================Artist Info Musicovery API================================================================
@@ -180,7 +184,6 @@ function init() {
 // // Called automatically with the response of the YouTube API request.
 // function onSearchResponse(response) {
 //    showResponse(response);
+
 // }
 });
-
-
