@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    =<script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-<!-- //materialize -->
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-  <!--   google fonts -->
+    
+    <!-- //materialize -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!--   google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Righteous" rel="stylesheet">
-  <!--   google icons -->
-  	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Link to css design page -->
+    <!--   google icons -->
+  	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- Link to css design page -->
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- backstretch -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+ 
      
     </head>
 <body>
-<script>
-$( document ).ready(function() {
- console.log('test');
-  $.backstretch("https://il6.picdn.net/shutterstock/videos/7080982/thumb/1.jpg");
-  $("#top").backstretch("http://gaudiyadarshan.com/gaudiyadarshan.com/wp-content/uploads/2011/05/NirmalBhakti-Gradient-Background-light-blue-to-white.jpg");
-});
-</script>
+
 <br>
 
 <!-- //code for the index main page -->
 <div id="indexPage">
-<div class="container white" id="top">
-  <h1>HappMe</h1>
-  <h4>The happiness app.</h4>
-  <h4>Time to get happy!</h4>
-</div>
  <br>
+  <br>
+    <div class="container white" id="top">
+      <h1>HappMe</h1>
+      <h4>The happiness app.</h4>
+      <h4>Time to get happy!</h4>
+    </div>
+  <br>
 
- <div class="container" id="picture">
-<div class="col-md-6">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="http://3.bp.blogspot.com/-7oL-BK9UOig/TpSgzxvZNeI/AAAAAAAAAjU/dH4JSn8wZ4M/s1600/6234943745_870a016b08_z_large.jpg">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>Click the link below to take a quiz that analyzes your current emotional state.</p>
-          <br>
-          <br>
-          <p>HappMe will then determine what you need to become happy (or happier)!</p>
+  <div class="container" id="picture">
+    <div class="col-md-6">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="assets/images/panelHappy.jpg">
         </div>
+
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>Click the link below to take a quiz that analyzes your current emotional state.</p>
+          <br>
+          </div>
+         
+
         <div class="card-action">
           <a class="waves-effect waves-light btn" id="begin">Begin</a>
         </div>
@@ -55,6 +51,7 @@ $( document ).ready(function() {
   </div>
   </div>
   </div>  
+
 
 <!-- END OF CODE FOR THE INDEX PAGE -->
 
@@ -96,11 +93,31 @@ $( document ).ready(function() {
       <input name="group5" type="radio" id="test10" />
       <label for="test10" id="sad">No</label>
     </p>
+    <br>
+    <a class="waves-effect waves-light btn" id="submit">Submit</a>
 
   </div>
 <br>
 <br>
-<script src="assets/javaScript/app.js"></script>
+
+ <!-- <!temporary div to play with YT API -->
+  <div class="container red" id="bottom">
+     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    </div>
+
+  <!-- jQuery -->
+  <script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <!-- materialize.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <!-- backstretch -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+  <!-- YT -->
+  <script src="https://apis.google.com/js/client.js?onload=init" type="text/javascript"></script>
+  <!-- logic -->
+  <script src="assets/javaScript/app.js"></script>
+
 </body>
 
 </html>
