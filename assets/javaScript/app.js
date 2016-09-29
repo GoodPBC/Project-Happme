@@ -1,4 +1,8 @@
-$('#').on('click',function(){
 
-	 
-})
+
+$("#begin").click(function() {
+	$("#quizPage").css('display','block');
+   $("#indexPage").replaceWith( $("#quizPage") );
+   
+ });
+
