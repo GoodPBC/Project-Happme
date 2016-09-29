@@ -1,6 +1,8 @@
 
+
 /*=========================== index.html css ==================================*/
 #top {
+
 	border-style: solid;
 	border-color: #26c6da;
 	border-width: 10px;
@@ -43,16 +45,17 @@ p  {
 }
 
 /*=====================  quiz.html css  ===============================*/
-#radio	{
+
+#qBox{
 	text-align: center;
 	font-family: Muli;
+	background-color: white;
 }
 
-#heading	{
+#heading{
 	text-align: center;
-	color: #1a237e:;
 	border-style: solid;
-	border-color: white;
+	border-color: #26c6da;
 	border-width: 10px;
 	font-family: Righteous, Muli;
 	font-style: oblique;
@@ -61,12 +64,31 @@ p  {
 	opacity: .7;
 }
 
-#quiz	{
-	text-align: center;
-	font-family: Muli;
-	color: #1a237e;
+/*//The following is the CSS for the quiz page*/
+
+#quizPage{
+font-family: Muli;
+border-width: 10px;
+border-style: solid;
+border-color: #26c6da;
+background-color: #fafafa;
+padding: 15px;
+display: none;
 }
 
-#qBox	{
-	text-align: center;
-}
+
+/*q id is assigned to the questions, radio buttons and answers*/
+#q{text-align: center;
+color: #1a237e;}
+
+/*This command changes the color of the radio buttons and yes/no*/
+label{color: #1a237e;}
+
+
+
+
+/*===============================  paralllax ====================================*/
+
+.parallax-container {
+      height: 800px;
+    }

@@ -1,3 +1,14 @@
+
+
+$( document ).ready(function() {
+
+$("#begin").click(function() {
+	$("#quizPage").css('display','block');
+   $("#indexPage").replaceWith( $("#quizPage") );
+   
+ });
+
+
 // we grab a mood value from the user
 //save mood value to a variable
 //insert user mood variable into query so it is the value of the API mood parameter
@@ -11,10 +22,12 @@
 //=========================================================================================================================================================
 //=======================================================================site background===================================================================
 //=========================================================================================================================================================
-$( document ).ready(function() {
+
   $.backstretch("assets/images/background.jpg");
   $("#top").backstretch("assets/images/header-bg.jpg");
-});
+   $('.parallax').parallax();
+
+
 
 //=================================================================================================================================
 //=======================================Artist Info Musicovery API================================================================
@@ -171,4 +184,6 @@ function init() {
 // // Called automatically with the response of the YouTube API request.
 // function onSearchResponse(response) {
 //    showResponse(response);
+
 // }
+});

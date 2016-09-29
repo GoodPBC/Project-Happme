@@ -10,13 +10,18 @@
   	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <!-- Link to css design page -->
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    
-    <link rel="shortcut icon" href="">
 
+    <!-- backstretch -->
+ 
+     
     </head>
 <body>
 
+<br>
 
+<!-- //code for the index main page -->
+<div id="indexPage">
+ <br>
   <br>
     <div class="container white" id="top">
       <h1>HappMe</h1>
@@ -31,22 +36,73 @@
         <div class="card-image">
           <img src="assets/images/panelHappy.jpg">
         </div>
+
         <div class="card-stacked">
           <div class="card-content">
             <p>Click the link below to take a quiz that analyzes your current emotional state.</p>
           <br>
+
+          </div>
          
-            <p>HappMe will then determine what you need to become happy (or happier)!</p>
-          </div>
-          <div class="card-action">
-            <a href="quiz.html">Click here</a>
-          </div>
+
+        <div class="card-action">
+          <a class="waves-effect waves-light btn" id="begin">Begin</a>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
+  </div>
+  </div>  
 
- <!--temporary div to play with YT API -->
+
+<!-- END OF CODE FOR THE INDEX PAGE -->
+
+<!-- START CODE FOR THE QUIZ PAGE -->
+<div class="container" id="quizPage">
+<form  id="qBox">
+  <p id="q">Have you laughed yet today?</p>
+    <p id="q">
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1" id="happy">Yes</label>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2" id="sad">No</label>
+    </p>
+    <p id="q">Were you excited to get out of bed this morning?</p>
+    <p id="q">
+      <input name="group2" type="radio" id="test3" />
+      <label for="test3" id="happy">Yes</label>
+      <input name="group2" type="radio" id="test4" />
+      <label for="test4" id="sad">No</label>
+    </p>
+    <p id="q">Are you easily irritated today?</p>
+    <p id="q">
+      <input name="group3" type="radio" id="test5" />
+      <label for="test5" id="sad">Yes</label>
+      <input name="group3" type="radio" id="test6" />
+      <label for="test6" id="happy">No</label>
+    </p>
+    <p id="q">Did you sleep well last night?</p>
+    <p id="q">
+      <input name="group4" type="radio" id="test7" />
+      <label for="test7" id="happy">Yes</label>
+      <input name="group4" type="radio" id="test8" />
+      <label for="test8" id="sad">No</label>
+    </p>
+    <p id="q">Are you feeling optimistic about the future?</p>
+    <p id="q">
+      <input name="group5" type="radio" id="test9" />
+      <label for="test9" id="happy">Yes</label>
+      <input name="group5" type="radio" id="test10" />
+      <label for="test10" id="sad">No</label>
+    </p>
+    <br>
+    <a class="waves-effect waves-light btn" id="submit">Submit</a>
+
+  </div>
+<br>
+<br>
+
+ <!-- <!temporary div to play with YT API -->
   <div class="container red" id="bottom">
      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="player"></div>
@@ -54,14 +110,18 @@
 
   <!-- jQuery -->
   <script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
   <!-- materialize.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <!-- backstretch -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-  <!--  google API JS client library -->
-  <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+
+  <!-- YT -->
+  <script src="https://apis.google.com/js/client.js?onload=init" type="text/javascript"></script>
   <!-- logic -->
   <script src="assets/javaScript/app.js"></script>
+
 </body>
 
 </html>
