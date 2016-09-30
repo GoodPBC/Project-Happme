@@ -53,6 +53,7 @@ $("#begin").click(function() {
 	console.log(queryURL);
 
 
+
 	$.ajax({url: queryURL, method: "GET"}) 
 		.done(function(root) {
 
@@ -66,6 +67,13 @@ $("#begin").click(function() {
 			console.log(root.root)
 			console.log(artistName);
 			console.log(artistTitle);	
+
+			var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Ricky&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
+
+			$.ajax({url: queryURL_YT, method: "GET"}) 
+		.done(function(response) {
+				console.log(response);
+		});
 	});
 
 
