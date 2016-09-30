@@ -33,7 +33,7 @@ $("#begin").click(function() {
 //=======================================Artist Info Musicovery API================================================================
 //=================================================================================================================================
 	var authKey = "&format=json&apikey=l0x48hv1";
-	var queryURLBase = "https://crossorigin.me/https://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
+	var queryURLBase = "http://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
 	var enregyParam = "&trackvalence=";
 	var userEnergy = 900000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing 
 	var moodParam = "&trackarousal=";
@@ -62,7 +62,8 @@ $("#begin").click(function() {
 
 			var artistName = root.root.tracks.track[0].artist.name;
 			var artistTitle = root.root.tracks.track[0].title;
-		
+			
+			console.log(root.root)
 			console.log(artistName);
 			console.log(artistTitle);	
 	});
