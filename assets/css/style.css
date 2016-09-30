@@ -74,6 +74,7 @@ border-color: #26c6da;
 background-color: #fafafa;
 padding: 15px;
 display: none;
+margin-top: 30px;
 }
 
 
@@ -85,6 +86,51 @@ color: #1a237e;}
 label{color: #1a237e;}
 
 
+/*css for the final page*/
+
+#bottom{display: none;}
+
+/*THIS IS THE CSS FOR THE HAPPY PAGE*/
+#happyPage{ background-image: url("https://t4.ftcdn.net/jpg/01/05/26/09/240_F_105260963_Ff1pUclrAqVqJCIBesBgp3uNDeOnaUzf.jpg"); 
+height: 800px;
+width: 100%;
+display: none; 
+padding: 20px;
+display: none;
+}
+
+#moodStatus{background-color: white;
+text-align: center;
+font-family: Righteous, Muli;
+color: #1a237e;
+padding: 10px;}
+
+#quote{
+	background-color: white;
+	text-align: center;
+font-family: Righteous, Muli;
+color: #1a237e;
+padding: 10px;
+}
+
+#music{
+	padding10px;
+	text-align: center;
+}
+
+#giphy{
+	text-align: center;
+}
+
+/*THIS IS THE CSS FOR THE SAD PAGE*/
+#sadPage{
+    background-image: url("http://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg     ");
+    background-size: cover; 
+    display: none;
+    height: 800px;
+	width: 100%;
+	padding: 20px;
+}
 
 
 /*===============================  paralllax ====================================*/
