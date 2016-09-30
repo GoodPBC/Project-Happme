@@ -104,7 +104,7 @@ $ (function() {
 		});
 		request.execute(function(response) {
 			console.log(response);
-		});m ""
+		});
 	});
 });
 

@@ -124,7 +124,7 @@ padding: 10px;
 
 /*THIS IS THE CSS FOR THE SAD PAGE*/
 #sadPage{
-    background-image: url("http://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg     ");
+    background-image: url("../images/summit.jpg");
     background-size: cover; 
     display: none;
     height: 800px;
