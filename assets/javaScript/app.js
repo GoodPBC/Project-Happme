@@ -76,8 +76,8 @@ $("#submitSad").click(function() {
 			var artistName = root.root.tracks.track[0].artist.name;
 			var artistTitle = root.root.tracks.track[0].title;
 			
-			console.log(artistName);
-			console.log(artistTitle);	
+			artistName = artistName.replace(/%20/g, "+");
+			artistTitle = artistTitle.replace(/%20/g, "+");	
 
 			var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + artistName + artistTitle + "&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
 				console.log(queryURL_YT);
