@@ -69,7 +69,7 @@ $("#begin").click(function() {
 			console.log(artistTitle);	
 
 			var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Ricky&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
-					cosnole.log(queryURL_YT);
+					console.log(queryURL_YT);
 			$.ajax({url: queryURL_YT, method: "GET"}) 
 		.done(function(response) {
 				console.log(response);
