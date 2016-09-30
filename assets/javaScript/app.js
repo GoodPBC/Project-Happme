@@ -8,6 +8,18 @@ $("#begin").click(function() {
    
  });
 
+$("#submitHappy").click(function() {
+	$("#happyPage").css('display','block');
+   $("#quizPage").replaceWith( $("#happyPage") );
+   
+ });
+
+$("#submitSad").click(function() {
+	$("#sadPage").css('display','block');
+   $("#quizPage").replaceWith( $("#sadPage") );
+   
+ });
+
 
 // we grab a mood value from the user
 //save mood value to a variable

@@ -96,17 +96,76 @@
       <label for="test10" id="sad" data-num= 1>No</label>
     </p>
     <br>
-    <a class="waves-effect waves-light btn" id="submit">Submit</a>
+    <a class="waves-effect waves-light btn" id="submitHappy">Happy</a>
+    <a class="waves-effect waves-light btn" id="submitSad">Sad</a>
 
   </div>
 <br>
 <br>
 
- <!-- <!temporary div to play with YT API -->
-  <div class="container red" id="bottom">
-     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+
+<!-- THIS IS THE HTML CODE FOR THE HAPPY PAGE -->
+<div class="container" id="happyPage">
+  <div id="moodStatus">
+      <h3>Congratulations! You are happy!</h3>
+  </div>
+  <br>
+ <div class="row">
+  <div class="col m6">
+      <div id="quote">
+        <h4>This is a meaningful quote for you.</h4>
+      </div>
+  </div>
+
+  <div class="col m6">
+  <div id="giphy">
+    <img src="https://media.giphy.com/media/s2qXK8wAvkHTO/giphy.gif">
+  </div>
+</div>
+</div>
+  <div id="music">
+    <iframe width="500" height="350" src="https://www.youtube.com/embed/AHDtXqjgEj4" frameborder="0" allowfullscreen align="middle"></iframe>
+  </div>
+
+</div>
+
+<!-- THIS IS THE CODE FOR THE SAD PAGE -->
+
+
+    
+<div id="sadPage" class="container">
+    <div id="moodStatus">
+      <h3>You are a bit blue today. Let's cheer you up.</h3>
     </div>
+      <br>
+        <!-- ===== QUOTE && ======= GIFS =======  -->
+    <div class="quote">
+            <div class="row">
+                    <div class="col s6">
+                      <div id="quote">
+                          <h3>This is a quote for you.</h3>
+                      </div>
+                        
+                    </div>
+            <div class="col s6">
+              <div id="giphy">
+                      <center><img src="https://media.giphy.com/media/LLHkw7UnvY3Kw/giphy.gif"></center> 
+              </div>
+            </div>
+            </div>
+        </div>
+        <!-- ====== ******************* ========== -->
+        <div class="video">
+                    <div class="row">
+                        <div class="col m12">
+                          <div id="music">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/84WIaK3bl_s" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
 
   <!-- jQuery -->
   <script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
