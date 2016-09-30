@@ -72,7 +72,8 @@ $("#begin").click(function() {
 				console.log(queryURL_YT);
 			$.ajax({url: queryURL_YT, method: "GET"}) 
 		.done(function(response) {
-				console.log(response.items[0].id.videoId);
+				var ytVideoId = response.items[0].id.videoId;
+				console.log(ytVideoId);
 		});
 	});
 
@@ -91,7 +92,7 @@ $ (function() {
 		});
 		request.execute(function(response) {
 			console.log(response);
-		});
+		});m ""
 	});
 });
 
