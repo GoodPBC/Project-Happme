@@ -45,7 +45,7 @@ $("#submitSad").click(function() {
 //=======================================Artist Info Musicovery API================================================================
 //=================================================================================================================================
 	var authKey = "&format=json&apikey=l0x48hv1";
-	var queryURLBase = "http://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
+	var queryURLBase = "https://crossorigin.me/http://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
 	var enregyParam = "&trackvalence=";
 	var userEnergy = 900000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing 
 	var moodParam = "&trackarousal=";
@@ -65,6 +65,7 @@ $("#submitSad").click(function() {
 	console.log(queryURL);
 
 
+
 	$.ajax({url: queryURL, method: "GET"}) 
 		.done(function(root) {
 
@@ -74,9 +75,17 @@ $("#submitSad").click(function() {
 
 			var artistName = root.root.tracks.track[0].artist.name;
 			var artistTitle = root.root.tracks.track[0].title;
-		
+			
+			console.log(root.root)
 			console.log(artistName);
 			console.log(artistTitle);	
+
+			var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Ricky&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
+				console.log(queryURL_YT);
+			$.ajax({url: queryURL_YT, method: "GET"}) 
+		.done(function(response) {
+				console.log(response.items[0].id.videoId);
+		});
 	});
 
 

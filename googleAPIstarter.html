@@ -11,9 +11,11 @@
 
 	<div id="results"></div>
 
-	<!-- load the google API -->
 	<script>
-		//apends results from request from makeRequest()
+	//https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Ricky&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s
+
+  
+  	//apends results from request from makeRequest()
 		function appendResults(text) {
         var results = document.getElementById('results');
         results.appendChild(document.createElement('P'));
@@ -38,8 +40,10 @@
       }
       //loads client library 7 registers handler that fires upon lib load 
       gapi.load('client', init);
->>>>>>> refs/remotes/origin/master
-	</script>
-	
-</body>
+
+
+    </script> 
+  </body>
 </html>
+
+	
