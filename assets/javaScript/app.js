@@ -76,7 +76,7 @@ $("#submitSad").click(function() {
 			var artistName = root.root.tracks.track[0].artist.name;
 			var artistTitle = root.root.tracks.track[0].title;
 			
-			console.log(root.root)
+			console.log(root.root);
 			console.log(artistName);
 			console.log(artistTitle);	
 
@@ -84,8 +84,12 @@ $("#submitSad").click(function() {
 				console.log(queryURL_YT);
 			$.ajax({url: queryURL_YT, method: "GET"}) 
 		.done(function(response) {
-				var ytVideoId = response.items[0].id.videoId;
-				console.log(ytVideoId);
+				var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
+				
+
+			console.log(root.root);
+			console.log(artistName);
+			console.log(artistTitle);
 		});
 	});
 
@@ -93,37 +97,6 @@ $("#submitSad").click(function() {
 //=========================================================================================================================================================
 //=======================================================================YOUTBE DATA API --fed artist and track name--=====================================
 //=========================================================================================================================================================
-$ (function() {
-	$("form").on("submit", function(e){
-		e.preventDefault();
-		//prepare the request
-		var request = gapi.client.search.list({
-					part: "snippet",
-					type: "video",
-					q: "cat"
-		});
-		request.execute(function(response) {
-			console.log(response);
-		});
-	});
-});
-
-
-function init() {
-	gapi.client.setApiKey("AIzaSyC5AZQrtUO4D7no_zKQvqyUNcNJ8cVnkOI");
-	gapi.client.load("youtube", "v3", function() {
-		//YT api is ready
-		console.log('test');
-	});
-}
-
-
-
-
-
-
-
-
 
 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
