@@ -79,7 +79,7 @@ $("#submitSad").click(function() {
 		userDecade = 50;	//ten needs to change with user age.  just hard coded for testing 
 		var decade = "&date" + userDecade + "=" + true;
 
-		//URL for ajax call 
+		//URL for ajax call  
 		queryURL = queryURLBase + enregyParam + userEnergy + moodParam + userMood + decade + userDecade + authKey
 		console.log(queryURL);
 
@@ -97,7 +97,7 @@ $("#submitSad").click(function() {
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
 							var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
-							console.log("yt=" + ytVideoId);
+							console.log(ytVideoId);
 							console.log(artistName);
 			      	console.log(artistTitle);
 
