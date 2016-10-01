@@ -46,11 +46,12 @@ $("#submit").click(function() {
    		}else if (arousalVal == "high" && valenceVal == "low") {
    				arousalVal = 9;
    				valenceVal = 1;
-   				
+
    				console.log(arousalVal);
 	   			console.log(valenceVal);
    		}else{
-   			// assumed low low
+   				arousalVal = 1;
+   				valenceVal = 1;
    				console.log(arousalVal);
 	   			console.log(valenceVal);
    		}
