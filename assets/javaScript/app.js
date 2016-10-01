@@ -144,7 +144,7 @@ $("#submit").click(function() {
 			     	  $('#player').attr('src', 'https://www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
 				  });
 		});
-
+		//qoute API to be added into the logic in the future
 		// $.ajax({url: queryURL, method: "GET"}) 
 		// 	.done(function(root) {
 				
