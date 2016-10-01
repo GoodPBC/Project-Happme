@@ -25,8 +25,6 @@ $("#submit").click(function() {
    var arousalVal = $("input[name='arousal']:checked").val();
    var valenceVal = $("input[name='valence']:checked").val();
 
-   	console.log(arousalVal);
-   	console.log(valenceVal);
 
   $("#happyPage").show();
 
@@ -51,18 +49,14 @@ $("#submit").click(function() {
 	   			console.log(valenceVal);
    		}else{
    				arousalVal = 1;
-   				valenceVal = 1;
+   				valenceVal = 2;
    				console.log(arousalVal);
 	   			console.log(valenceVal);
    		}
    		apiGet(arousalVal, valenceVal);
- });
+ 	});
 
-// $("#submitSad").click(function() {
-// 	$("#sadPage").css('display','block');
-//    $("#quizPage").replaceWith( $("#sadPage") );
-   
-// });
+
 
 
 // we grab a mood value from the user
