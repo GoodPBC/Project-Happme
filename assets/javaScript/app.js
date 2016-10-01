@@ -24,7 +24,7 @@ $("#begin").click(function() {
 
 $("#submit").click(function() {
 	$("#quizPage").hide();
-	$("#controlQuestionPage").show();
+	
    var arousalVal = $("input[name='arousal']:checked").val();
    var valenceVal = $("input[name='valence']:checked").val();
 
@@ -32,7 +32,7 @@ $("#submit").click(function() {
   // $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
-   				
+   				$("#controlQuestionPage").show();
 	   			arousalVal = 9;
 	   			valenceVal = 9;
 
