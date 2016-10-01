@@ -32,36 +32,63 @@ $("#submit").click(function() {
   // $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
-   				$("#controlQuestionPage").show();
-	   			arousalVal = 9;
+   				arousalVal = 9;
 	   			valenceVal = 9;
-
-
-	   			console.log(arousalVal);
-	   			console.log(valenceVal);
+   				$("#controlQuestionContent").html("Do you feel hyper active?");
 
    		}else if (arousalVal == "low" && valenceVal == "high") {
    				arousalVal = 1;
    				valenceVal = 9;
+   				$("#controlQuestionContent").html("Would you like digital coffee?");
 
-   				console.log(arousalVal);
-	   			console.log(valenceVal);
    		}else if (arousalVal == "high" && valenceVal == "low") {
    				arousalVal = 9;
    				valenceVal = 1;
+   				$("#controlQuestionContent").html("Would you like something new?");
 
-   				console.log(arousalVal);
-	   			console.log(valenceVal);
    		}else{
    				arousalVal = 1;
    				valenceVal = 1;
-   				console.log(arousalVal);
-	   			console.log(valenceVal);
+   				$("#controlQuestionContent").html("Do you normally feel this way?");
    		}
-   		apiGet(arousalVal, valenceVal);
+
+   		$("#controlQuestionPage").show();
+
+   		//apiGet(arousalVal, valenceVal);
  });
 
 
+
+$("#submitControlQuestion").click(function() {
+	$("#controlQuestionPage").hide();
+	
+	var arousalVal = $("input[name='arousal']:checked").val();
+  var valenceVal = $("input[name='valence']:checked").val();
+	var controlVal = $("input[name='control']:checked").val();
+
+			if (arousalVal == "high" && valenceVal == "high" && controlVal == "high") {
+					arousalVal = 5;  valenceVal = 9;
+   		} else if (arousalVal == "high" && valenceVal == "high" && controlVal == "low") {
+					arousalVal = 9;  valenceVal = 9;
+   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "high") {
+					arousalVal = 9;  valenceVal = 5;
+   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "low") {
+					arousalVal = 9;  valenceVal = 1;
+   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "high") {
+					arousalVal = 9;  valenceVal = 9;
+   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "low") {
+					arousalVal = 1;  valenceVal = 9;
+   		} else if (arousalVal == "low" && valenceVal == "low" && controlVal == "high") {
+					arousalVal = 1;  valenceVal = 1;
+   		} else {
+   			//if (arousalVal == "low" && valenceVal == "low" && controlVal == "low") {
+					arousalVal = 5;  valenceVal = 5;
+			}
+
+		$("#happyPage").show();
+		apiGet(arousalVal, valenceVal);
+
+});
 
 
 // we grab a mood value from the user
