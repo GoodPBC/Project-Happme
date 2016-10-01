@@ -94,7 +94,7 @@ $("#submit").click(function() {
 				artistName = artistName.replace(" ","+");
 				artistTitle = artistTitle.replace(" ", "+");	
 
-					var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=Ricky&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
+					var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" +artistName + artistTitle + "&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
 			
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
