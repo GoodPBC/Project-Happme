@@ -15,5 +15,6 @@ For the back-end team, the primary challenge was creating code that delivered th
 
 All of the code in the HTML and Javascript is well-documented, allowing the code reader to read the code like reading a book. Hopefully an enjoyable book.
 
+Project URL: https://calm-wildwood-23092.herokuapp.com/">Happme</a>
 
-<a src="https://calm-wildwood-23092.herokuapp.com/">Happme</a>
+Logic Doc: https://docs.google.com/document/d/1wAAm89Zj9REQlLEA4AJnPMlFkmI06nIBRcdidD3jEk4/edit
