@@ -91,10 +91,10 @@ $("#submit").click(function() {
 				var artistName = root.root.tracks.track[0].artist.name;
 				var artistTitle = root.root.tracks.track[0].title;
 				
-				artistName = artistName.replace(" ","+");
-				artistTitle = artistTitle.replace(" ", "+");	
+				artistName = artistName.replace(/ /g,"+");
+				artistTitle = artistTitle.replace(/ /g, "+");	
 
-					var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" +artistName + artistTitle + "&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
+					var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + artistName + artistTitle + "&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
 			
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
