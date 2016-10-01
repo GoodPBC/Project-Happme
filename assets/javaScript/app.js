@@ -155,7 +155,7 @@ $("#submitControlQuestion").click(function() {
 		$.ajax({url: queryURL, method: "GET"}) 
 			.done(function(root) {
 				
-        var quoteQueryURL2 = "http://quotes.rest/qod.json?category=";
+        var quoteQueryURL2 = "https://quotes.rest/qod.json?category=";
              
     });
 	}
