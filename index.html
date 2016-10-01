@@ -3,18 +3,18 @@
 <head>
     
     <!-- //materialize -->
-	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <!--   google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Righteous" rel="stylesheet">
     <!--   google icons -->
-  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <!-- Link to css design page -->
-  	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- backstretch -->
  
      
-    </head> 
+    </head>
 <body>
 
 <br>
@@ -59,50 +59,46 @@
 
 <!-- START CODE FOR THE QUIZ PAGE -->
 <div class="container" id="quizPage">
-<form  id="qBox">
-  <p id="q">Have you laughed yet today?</p>
-    <p id="q">
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1" id="happy" data-num= 2>Yes</label>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2" id="sad" data-num= 1>No</label>
-    </p>
-    <p id="q">Were you excited to get out of bed this morning?</p>
-    <p id="q">
-      <input name="group2" type="radio" id="test3" />
-      <label for="test3" id="happy" data-num= 2>Yes</label>
-      <input name="group2" type="radio" id="test4" />
-      <label for="test4" id="sad" data-num= 1>No</label>
-    </p>
-    <p id="q">Are you easily irritated today?</p>
-    <p id="q">
-      <input name="group3" type="radio" id="test5" />
-      <label for="test5" id="sad">Yes</label>
-      <input name="group3" type="radio" id="test6" />
-      <label for="test6" id="happy" data-num= 2>No</label>
-    </p>
-    <p id="q">Did you sleep well last night?</p>
-    <p id="q">
-      <input name="group4" type="radio" id="test7" />
-      <label for="test7" id="happy" data-num= 2>Yes</label>
-      <input name="group4" type="radio" id="test8" />
-      <label for="test8" id="sad" data-num= 1>No</label>
-    </p>
-    <p id="q">Are you feeling optimistic about the future?</p>
-    <p id="q">
-      <input name="group5" type="radio" id="test9" />
-      <label for="test9" id="happy" data-num= 2>Yes</label>
-      <input name="group5" type="radio" id="test10" />
-      <label for="test10" id="sad" data-num= 1>No</label>
-    </p>
-    <br>
-    <a class="waves-effect waves-light btn" id="submitHappy">Happy</a>
-    <a class="waves-effect waves-light btn" id="submitSad">Sad</a>
 
+<form  id="determineMood" action="#">
+  <div class="input-field col s12" id="arousalQuestion">
+    <p class="center-align">Pick the group that best describes how you are feeling currently?</p>
+   <p>
+      <input name="arousal" type="radio" id="arousalQh" value="high"/>
+      <label for="arousalQh">Nervous, Stressed, Excited, or Alert</label>
+    </p>
+    <p>
+      <input name="arousal" type="radio" id="arousalQl" value="low"/>
+      <label for="arousalQl">Depressed, Bored, Relaxed, or Serene</label>
+    </p>
   </div>
-<br>
+
 <br>
 
+
+ <div class="input-field col s12" id="valenceQuestion">
+    <p class="center-align">Pick the group that best describes how you are feeling currently?</p>
+   <p>
+      <input name="valence" type="radio" id="valenceQh" value="high"/>
+      <label for="valenceQh">Elated, Happy, Content, or Calm</label>
+    </p>
+    <p>
+      <input name="valence" type="radio" id="valenceQl" value="low"/>
+      <label for="valenceQl">Upset, Tense, Sad, or Fatigued</label>
+    </p>
+  </div>
+  <br>
+  <div class="card-action">
+          <a class="waves-effect waves-light btn" id="submit">Submit</a>
+        </div>
+</form>
+
+
+
+ 
+
+ 
+  
 
 <!-- THIS IS THE HTML CODE FOR THE HAPPY PAGE -->
 <div class="container" id="happyPage">
@@ -166,7 +162,6 @@
         </div>
     </div>
 
-<iframe src="#" frameborder="0" width="1" height="1" id="player"></iframe>
 
   <!-- jQuery -->
   <script   src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
