@@ -108,6 +108,26 @@ $("#submit").click(function() {
 				  });
 		});
 
+		$.ajax({url: queryURL, method: "GET"}) 
+			.done(function(root) {
+				
+        var quoteQueryURL2 = "http://quotes.rest/qod.json?category=";
+             
+    });
+
+		$.ajax({url: queryURL, method: "GET"}) 
+			.done(function(root) {
+
+				var highValHighArous = ["alert", "excited", "elated", "happy"];
+				var loValHighArous = ["tense", "nervous", "stressed", "upset"];
+				var loValLoArous = ["sad", "bored", "fatigued", "depressed"];
+				var HighValLoArous = ["content", "serene", "relaxed", "calm"];
+
+				var giphyQueryURL = "http://api.giphy.com/v1/gifs/search?q=" +  + "&api_key=dc6zaTOxFJmzC&limit=1";
+        
+        // run for loop i.j.k.l
+             
+    });
 
 	}
 
