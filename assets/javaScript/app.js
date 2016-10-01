@@ -198,6 +198,7 @@ function quoteApiGet(userEnergy , userMood) {
 
 					$.ajax({url: giphyQueryURL, method: "GET"}).done(function(response) {
 							var moodImageURL = response.data[Math.floor(Math.random(10))].images.fixed_height.url;
+							console.log(moodImageURL);
 
               var moodImage = $('<img>');
               moodImage.attr('src', moodImageURL);
