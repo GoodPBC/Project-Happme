@@ -132,6 +132,16 @@ padding: 10px;
 	padding: 20px;
 }
 
+/*THIS IS THE CSS FOR THE control PAGE*/
+#controlQuestionPage{
+    background-image: url("../images/summit.jpg");
+    background-size: cover; 
+    display: none;
+    height: 800px;
+	width: 100%;
+	padding: 20px;
+}
+
 
 /*===============================  paralllax ====================================*/
 
