@@ -29,7 +29,7 @@ $("#submit").click(function() {
   // $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
-   				$("#happyPage").show();
+   				$("#controlQuestionOne").show();
 	   			arousalVal = 9;
 	   			valenceVal = 9;
 
