@@ -17,13 +17,12 @@ $( document ).ready(function() {
 $("#begin").click(function() {
 	$("#indexPage").hide();
 	$("#quizPage").show();
-	$("#controlQuestionOne").hide();
+	$("#controlQuestionPage").hide();
    
  });
 
 $("#submit").click(function() {
 	$("#quizPage").hide();
-	$("#controlQuestionOne").hide();
    var arousalVal = $("input[name='arousal']:checked").val();
    var valenceVal = $("input[name='valence']:checked").val();
 
@@ -31,7 +30,7 @@ $("#submit").click(function() {
   // $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
-   				$("#controlQuestionOne").show();
+   				$("#controlQuestionPage").show();
 	   			arousalVal = 9;
 	   			valenceVal = 9;
 
