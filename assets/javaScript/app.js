@@ -169,7 +169,7 @@ function quoteApiGet(userEnergy , userMood) {
 		$.ajax({url: queryURL, method: "GET"}) 
 			.done(function(root) {
 
-				var mood;
+				var mood = [[]];
 				mood[1][1] = ["sad", "bored", "fatigued", "depressed"];
 				mood[1][5] = ["sad", "bored", "fatigued", "depressed"];
 				mood[1][9] = ["tense", "nervous", "stressed", "upset"];
