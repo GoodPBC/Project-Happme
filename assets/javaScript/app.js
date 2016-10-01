@@ -104,7 +104,7 @@ $("#submit").click(function() {
 							console.log(artistName);
 			      	console.log(artistTitle);
 
-			     	  $('#player').attr('src', 'http://www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
+			     	  $('#player').attr('src', 'https://www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
 				  });
 		});
 
