@@ -97,7 +97,7 @@ $("#submitSad").click(function() {
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
 							var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
-							console.log(ytVideoId);
+							console.log("yt=" + ytVideoId);
 							console.log(artistName);
 			      	console.log(artistTitle);
 
