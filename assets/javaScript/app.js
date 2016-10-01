@@ -2,7 +2,7 @@
 
 $( document ).ready(function() {
 //=========================================================================================================================================================
-//=======================================================================site background===================================================================
+//=============================================== backstretch & .hide fixsite background===================================================================
 //=========================================================================================================================================================
 
   $.backstretch("assets/images/background.jpg");
@@ -13,15 +13,14 @@ $( document ).ready(function() {
 //=========================================================================================================================================================
 
 
-
+// 1st event listener for first click event on "begin button", also shows 1st layer mood analysis
 $("#begin").click(function() {
 	$("#indexPage").hide();
 	$("#controlQuestionPage").hide();
 	$("#quizPage").show();
 
-   
- });
-
+});
+// second listener that hides 1st layer mood analysis and grabs value of analysis check boxes 
 $("#submit").click(function() {
 	$("#quizPage").hide();
 	
@@ -29,8 +28,9 @@ $("#submit").click(function() {
    var valenceVal = $("input[name='valence']:checked").val();
 
 
-  // $("#happyPage").show();
-
+   		//this block of code executes if statements on first layer mood analysis, assigns value 
+   		//and manipulates DOM to begin the 2nd layer or "control layer" of the program logic \
+   		//second layer asks a control question to determine if a user might require a mood adjustment
    		if (arousalVal == "high" && valenceVal == "high") {
    				arousalVal = 9;
 	   			valenceVal = 9;
@@ -51,61 +51,54 @@ $("#submit").click(function() {
    				valenceVal = 1;
    				$("#controlQuestionContent").html("Do you normally feel this way?");
    		}
-
+   		//shows control question page using jQuery
    		$("#controlQuestionPage").show();
 
    		//apiGet(arousalVal, valenceVal);
  });
 
 
+	//event listener that submits control logic 
+	$("#submitControlQuestion").click(function() {
+		$("#controlQuestionPage").hide();
+		//re grab user input values with 3rd input value
+		var arousalVal = $("input[name='arousal']:checked").val();
+	  var valenceVal = $("input[name='valence']:checked").val();
+		var controlVal = $("input[name='control']:checked").val();
+				//if statements operating 3 dimensionally on all possible program outcomes.. This is logic To be itterated
+				//upon it most surely can be improved
+				if (arousalVal == "high" && valenceVal == "high" && controlVal == "high") {
+						arousalVal = 5;  valenceVal = 9;
+	   		} else if (arousalVal == "high" && valenceVal == "high" && controlVal == "low") {
+						arousalVal = 9;  valenceVal = 9;
+	   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "high") {
+						arousalVal = 9;  valenceVal = 5;
+	   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "low") {
+						arousalVal = 9;  valenceVal = 1;
+	   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "high") {
+						arousalVal = 9;  valenceVal = 9;
+	   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "low") {
+						arousalVal = 1;  valenceVal = 9;
+	   		} else if (arousalVal == "low" && valenceVal == "low" && controlVal == "high") {
+						arousalVal = 1;  valenceVal = 1;
+	   		} else {
+						arousalVal = 5;  valenceVal = 5;
+				}
+			//show s results pages and makes API calls  with appropriate values
+			$("#happyPage").show();
+			musicApiGet(arousalVal, valenceVal);
+			giphyAPIGet(arousalVal, valenceVal);
 
-$("#submitControlQuestion").click(function() {
-	$("#controlQuestionPage").hide();
-	
-	var arousalVal = $("input[name='arousal']:checked").val();
-  var valenceVal = $("input[name='valence']:checked").val();
-	var controlVal = $("input[name='control']:checked").val();
+	});
 
-			if (arousalVal == "high" && valenceVal == "high" && controlVal == "high") {
-					arousalVal = 5;  valenceVal = 9;
-   		} else if (arousalVal == "high" && valenceVal == "high" && controlVal == "low") {
-					arousalVal = 9;  valenceVal = 9;
-   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "high") {
-					arousalVal = 9;  valenceVal = 5;
-   		} else if (arousalVal == "high" && valenceVal == "low" && controlVal == "low") {
-					arousalVal = 9;  valenceVal = 1;
-   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "high") {
-					arousalVal = 9;  valenceVal = 9;
-   		} else if (arousalVal == "low" && valenceVal == "high" && controlVal == "low") {
-					arousalVal = 1;  valenceVal = 9;
-   		} else if (arousalVal == "low" && valenceVal == "low" && controlVal == "high") {
-					arousalVal = 1;  valenceVal = 1;
-   		} else {
-   			//if (arousalVal == "low" && valenceVal == "low" && controlVal == "low") {
-					arousalVal = 5;  valenceVal = 5;
-			}
 
-		$("#happyPage").show();
-		musicApiGet(arousalVal, valenceVal);
-		quoteApiGet(arousalVal, valenceVal)
 
 });
-
-
-
-});
-
-
-
-
-
-
-
 
 // we grab a mood value from the user
 //save mood value to a variable
 //insert user mood variable into query so it is the value of the API mood parameter
-//we query gracenote and replace the value of the mood parameter
+//we query music API  and replace the value of the mood parameter with userEnergy & userMood
 //the API should return a list of artists assoicated with that mood.
 //save one or more of the returned artists into a variable
 //make a second API call to spotify or similiar and use artist list as seed value for call. this api 
@@ -116,56 +109,52 @@ $("#submitControlQuestion").click(function() {
 	//=================================================================================================================================
 	//=======================================Artist Info Musicovery API================================================================
 	//=================================================================================================================================
+		//music meta API variables
 		var authKey = "&format=json&apikey=l0x48hv1";
 		var queryURLBase = "https://crossorigin.me/http://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
 		var enregyParam = "&trackvalence=";
 		var userEnergy = userEnergy * 100000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing 
 		var moodParam = "&trackarousal=";
 		var userMood = userMood * 100000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing 
-		userDecade = 50;	//ten needs to change with user age.  just hard coded for testing 
+		//userDecade = 50;	//ten needs to change with user age.  just hard coded for testing 
 		var decade = "&date" + userDecade + "=" + true;
 
 		//URL for ajax call  
 		queryURL = queryURLBase + enregyParam + userEnergy + moodParam + userMood + decade + userDecade + authKey
 		console.log(queryURL);
-
+		//query music meta data
 		$.ajax({url: queryURL, method: "GET"}) 
 			.done(function(root) {
-
+				//pull artist name and song from JSON
 				var artistName = root.root.tracks.track[0].artist.name;
 				var artistTitle = root.root.tracks.track[0].title;
-				
+				//regex to replace any whitespace and concatenate URL
 				artistName = artistName.replace(/ /g,"+");
 				artistTitle = artistTitle.replace(/ /g, "+");	
-
+					//pass artist vars to YT Data API
 					var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + artistName + artistTitle + "&type=video&fields=items%2Fid%2FvideoId&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
-			
+					//ajax call to YT to grab ytVideo ID
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
-							console.log(queryURL_YT);
 							var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
-							console.log(ytVideoId);
-							console.log(artistName);
-			      	console.log(artistTitle);
+							// console.log(ytVideoId);
+							// console.log(artistName);
+			    //   	console.log(artistTitle);
 
 			     	  $('#player').attr('src', 'https://www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
 				  });
 		});
 
-		$.ajax({url: queryURL, method: "GET"}) 
-			.done(function(root) {
+		// $.ajax({url: queryURL, method: "GET"}) 
+		// 	.done(function(root) {
 				
-        var quoteQueryURL2 = "https://quotes.rest/qod.json?category=";
+  //       var quoteQueryURL2 = "https://quotes.rest/qod.json?category=";
              
-    });
+  //   });
 	}
 
 
-
-
-
-
-function quoteApiGet(userEnergy , userMood) {
+function giphyAPIGet(userEnergy , userMood) {
 		$.ajax({url: queryURL, method: "GET"}) 
 			.done(function(root) {
 
