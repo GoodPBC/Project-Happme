@@ -35,7 +35,7 @@ $("#submitSad").click(function() {
 
   $.backstretch("assets/images/background.jpg");
   $("#top").backstretch("assets/images/header-bg.jpg");
-   $('.parallax').parallax();
+   
 
 
 
@@ -45,9 +45,9 @@ $("#submitSad").click(function() {
 	var authKey = "&format=json&apikey=l0x48hv1";
 	var queryURLBase = "https://crossorigin.me/http://musicovery.com/api/V3/playlist.php?&listenercountry=us&resultsnumber=5&fct=getfrommood";
 	var enregyParam = "&trackvalence=";
-	var userEnergy = 900000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing
+	var userEnergy = 100000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing
 	var moodParam = "&trackarousal=";
-	var userMood = 900000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing
+	var userMood = 100000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing
 	userDecade = 50;	//ten needs to change with user age.  just hard coded for testing 
 	var decade = "&date" + userDecade + "=" + true;
 
@@ -59,24 +59,23 @@ $("#submitSad").click(function() {
 	$.ajax({url: queryURL, method: "GET"}) 
 		.done(function(response) {
 
-
 			var artistName = response.root.tracks.track[0].artist.name;
 			var artistTitle = response.root.tracks.track[0].title;
 			
 			artistName = artistName.replace(" ","+");
 			artistTitle = artistTitle.replace(" ", "+");	
 
-			var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + artistName + artistTitle + "&type=video&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
+				var queryURL_YT = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + artistName + artistTitle + "&type=video&key=AIzaSyBwVDM-Vd_i_HMVlPJXFbBW0lmZSjf_h2s";
 
+				$.ajax({url: queryURL_YT, method: "GET"}) 
+					.done(function(response) {
+						var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
 
-			$.ajax({url: queryURL_YT, method: "GET"}) 
-		.done(function(response) {
-				var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
+							console.log(artistName);
+	        		console.log(artistTitle);
 
-				console.log(artistName);
-                console.log(artistTitle);
-            $('#player').attr('src', '//www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
-		});
+	            $('#player').attr('src', '//www.youtube.com/embed/' + ytVideoId + '?rel=0&amp;autoplay=1')
+				});
 	});
 
 
