@@ -86,9 +86,20 @@ $("#submitControlQuestion").click(function() {
 			}
 
 		$("#happyPage").show();
-		apiGet(arousalVal, valenceVal);
+		musicApiGet(arousalVal, valenceVal);
+		quoteApiGet(arousalVal, valenceVal)
 
 });
+
+
+
+});
+
+
+
+
+
+
 
 
 // we grab a mood value from the user
@@ -101,11 +112,7 @@ $("#submitControlQuestion").click(function() {
 //YOUTUBE project ID will be happme-144801
 //YOUTUBE API KEY AIzaSyC5AZQrtUO4D7no_zKQvqyUNcNJ8cVnkOI ***parameter -- key=API_KEY***
 
-
-
-	function apiGet(userEnergy , userMood) {
-
-
+	function musicApiGet(userEnergy , userMood) {
 	//=================================================================================================================================
 	//=======================================Artist Info Musicovery API================================================================
 	//=================================================================================================================================
@@ -151,25 +158,42 @@ $("#submitControlQuestion").click(function() {
         var quoteQueryURL2 = "http://quotes.rest/qod.json?category=";
              
     });
+	}
 
+
+
+
+
+
+function quoteApiGet(userEnergy , userMood) {
 		$.ajax({url: queryURL, method: "GET"}) 
 			.done(function(root) {
+
+				var mood;
+				mood[1][1] = ["sad", "bored", "fatigued", "depressed"];
+				mood[1][5] = ["sad", "bored", "fatigued", "depressed"];
+				mood[1][9] = ["tense", "nervous", "stressed", "upset"];
+				mood[5][1] = ["sad", "bored", "fatigued", "depressed"];
+				mood[5][5] = ["sad", "bored", "fatigued", "depressed"];
+				mood[5][9] = ["sad", "bored", "fatigued", "depressed"];
+				mood[9][1] = ["content", "serene", "relaxed", "calm"];
+				mood[9][5] = ["sad", "bored", "fatigued", "depressed"];
+				mood[9][9] = ["alert", "excited", "elated", "happy"];
+
 
 				var highValHighArous = ["alert", "excited", "elated", "happy"];
 				var loValHighArous = ["tense", "nervous", "stressed", "upset"];
 				var loValLoArous = ["sad", "bored", "fatigued", "depressed"];
 				var HighValLoArous = ["content", "serene", "relaxed", "calm"];
 
-				var giphyQueryURL = "http://api.giphy.com/v1/gifs/search?q=" +  + "&api_key=dc6zaTOxFJmzC&limit=1";
+
+				randMood = mood[userEnergy][userMood][Math.floor(Math.random()*mood[userEnergy][userMood].length)];
+
+				var giphyQueryURL = "http://api.giphy.com/v1/gifs/search?q=" + randMood + "&api_key=dc6zaTOxFJmzC&limit=1";
         
         // run for loop i.j.k.l
              
     });
 
-	}
-
-});
-
-
-
+}
 
