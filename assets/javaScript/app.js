@@ -117,7 +117,7 @@ $("#submit").click(function() {
 		var moodParam = "&trackarousal=";
 		var userMood = userMood * 100000; //scale of 100000 - 900000 will have to change with user input/ user score  just hard coded for testing 
 		//userDecade = 50;	//ten needs to change with user age.  just hard coded for testing 
-		var decade = "&date" + userDecade + "=" + true;
+		// var decade = "&date" + userDecade + "=" + true;
 
 		//URL for ajax call  
 		queryURL = queryURLBase + enregyParam + userEnergy + moodParam + userMood + decade + userDecade + authKey

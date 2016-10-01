@@ -142,7 +142,37 @@ padding: 10px;
 	padding: 20px;
 }
 
+#controlQuestionPage{
+   background-image: url("../images/summit.jpg");
+   background-size: cover; 
+   display: none;
+   height: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
 
+#controlQuestionOne{
+    background-color: white;
+    font-family: Righteous, Muli;
+    font-style: oblique;
+    padding: 15px;
+    color: #1a237e ;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+#activityBtn{
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+#buttonz{
+    text-align: center;
+}
 /*===============================  paralllax ====================================*/
 
 .parallax-container {
