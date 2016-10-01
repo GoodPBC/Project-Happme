@@ -192,12 +192,12 @@ function quoteApiGet(userEnergy , userMood) {
 
 				randMood = mood[userEnergy][userMood][Math.floor(Math.random()*mood[userEnergy][userMood].length)];
 
-				var giphyQueryURL = "https://api.giphy.com/v1/gifs/search?q=" + randMood + "&api_key=dc6zaTOxFJmzC&limit=1";
+				var giphyQueryURL = "https://api.giphy.com/v1/gifs/search?q=" + randMood + "&api_key=dc6zaTOxFJmzC&limit=10";
 
 
 
 					$.ajax({url: giphyQueryURL, method: "GET"}).done(function(response) {
-							var moodImageURL = response.data[0].images.fixed_height.url;
+							var moodImageURL = response.data[Math.floor(Math.random(10))].images.fixed_height.url;
 
               var moodImage = $('<img>');
               moodImage.attr('src', moodImageURL);
