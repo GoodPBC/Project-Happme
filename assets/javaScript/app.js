@@ -26,11 +26,13 @@ $("#submit").click(function() {
    var valenceVal = $("input[name='valence']:checked").val();
 
 
-  $("#happyPage").show();
+  // $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
+   				$("#happyPage").show();
 	   			arousalVal = 9;
 	   			valenceVal = 9;
+
 
 	   			console.log(arousalVal);
 	   			console.log(valenceVal);
@@ -49,12 +51,12 @@ $("#submit").click(function() {
 	   			console.log(valenceVal);
    		}else{
    				arousalVal = 1;
-   				valenceVal = 2;
+   				valenceVal = 1;
    				console.log(arousalVal);
 	   			console.log(valenceVal);
    		}
    		apiGet(arousalVal, valenceVal);
- 	});
+ });
 
 
 
