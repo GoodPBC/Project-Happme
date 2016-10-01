@@ -7,7 +7,7 @@ $( document ).ready(function() {
 
   $.backstretch("assets/images/background.jpg");
   $("#top").backstretch("assets/images/header-bg.jpg");
-
+  $("#controlQuestionPage").show();
 //=========================================================================================================================================================
 //========================================================== event listener to begin question phase  ======================================================
 //=========================================================================================================================================================
@@ -16,6 +16,7 @@ $( document ).ready(function() {
 
 $("#begin").click(function() {
 	$("#indexPage").hide();
+	$("#controlQuestionPage").show();
 	$("#quizPage").show();
 
    
