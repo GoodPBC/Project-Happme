@@ -17,6 +17,7 @@ $( document ).ready(function() {
 $("#begin").click(function() {
 	$("#indexPage").hide();
 	$("#quizPage").show();
+	$("#controlQuestionOne").hide();
    
  });
 
