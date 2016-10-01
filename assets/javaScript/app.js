@@ -170,6 +170,9 @@ function quoteApiGet(userEnergy , userMood) {
 			.done(function(root) {
 
 				var mood = [[]];
+				for (i=0;i<10;i++) {
+					mood[i] = new Array(10);
+				}
 				mood[1][1] = ["sad", "bored", "fatigued", "depressed"];
 				mood[1][5] = ["sad", "bored", "fatigued", "depressed"];
 				mood[1][9] = ["tense", "nervous", "stressed", "upset"];
