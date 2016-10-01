@@ -31,10 +31,10 @@ $("#submit").click(function() {
   $("#happyPage").show();
 
    		if (arousalVal == "high" && valenceVal == "high") {
-   			arousalVal = 9;
-   			valenceVal = 9;
-   			console.log(arousalVal);
-   			console.log(valenceVal);
+	   			arousalVal = 9;
+	   			valenceVal = 9;
+	   			console.log(arousalVal);
+	   			console.log(valenceVal);
 
    		}else if (arousalVal == "low" && valenceVal == "high") {
    				console.log('Test1');
@@ -47,11 +47,11 @@ $("#submit").click(function() {
    		apiGet(arousalVal, valenceVal);
  });
 
-$("#submitSad").click(function() {
-	$("#sadPage").css('display','block');
-   $("#quizPage").replaceWith( $("#sadPage") );
+// $("#submitSad").click(function() {
+// 	$("#sadPage").css('display','block');
+//    $("#quizPage").replaceWith( $("#sadPage") );
    
-});
+// });
 
 
 // we grab a mood value from the user
@@ -98,6 +98,7 @@ $("#submitSad").click(function() {
 			
 					$.ajax({url: queryURL_YT, method: "GET"}) 
 						.done(function(response) {
+							console.log(queryURL_YT);
 							var ytVideoId = response.items[0].id.videoId; // this gets fed to youtube embed
 							console.log(ytVideoId);
 							console.log(artistName);
