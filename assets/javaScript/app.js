@@ -33,16 +33,26 @@ $("#submit").click(function() {
    		if (arousalVal == "high" && valenceVal == "high") {
 	   			arousalVal = 9;
 	   			valenceVal = 9;
+
 	   			console.log(arousalVal);
 	   			console.log(valenceVal);
 
    		}else if (arousalVal == "low" && valenceVal == "high") {
-   				console.log('Test1');
+   				arousalVal = 1;
+   				valenceVal = 9;
+
+   				console.log(arousalVal);
+	   			console.log(valenceVal);
    		}else if (arousalVal == "high" && valenceVal == "low") {
-   				console.log('Test2');
+   				arousalVal = 9;
+   				valenceVal = 1;
+   				
+   				console.log(arousalVal);
+	   			console.log(valenceVal);
    		}else{
    			// assumed low low
-   				console.log('Test3');
+   				console.log(arousalVal);
+	   			console.log(valenceVal);
    		}
    		apiGet(arousalVal, valenceVal);
  });
