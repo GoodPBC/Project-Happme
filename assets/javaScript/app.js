@@ -197,14 +197,12 @@ function quoteApiGet(userEnergy , userMood) {
 
 
 					$.ajax({url: giphyQueryURL, method: "GET"}).done(function(response) {
-							var moodImage = response.data[0].images.fixed_height.url;
-							console.log(moodImage);
-    			});
-					
+							var moodImageURL = response.data[0].images.fixed_height.url;
 
-				
-        
-        // run for loop i.j.k.l
+              var moodImage = $('<img>');
+              moodImage.attr('src', moodImageURL);
+              $('#giphy').html(moodImage);
+    			});
              
     });
 
