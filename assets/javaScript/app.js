@@ -22,6 +22,7 @@ $("#begin").click(function() {
 
 $("#submit").click(function() {
 	$("#quizPage").hide();
+	$("#controlQuestionOne").hide();
    var arousalVal = $("input[name='arousal']:checked").val();
    var valenceVal = $("input[name='valence']:checked").val();
 
